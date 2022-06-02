@@ -1,6 +1,7 @@
 <footer>
   <h1>Vragen?</h1>
   <div id="container1">
+    <!-- Footer Left side -->
     <div id="footerleft">
       <form action="action_page.php">
 
@@ -24,6 +25,8 @@
 
       </form>
     </div>
+
+    <!-- Footer Right side -->
     <div id="footerright">
       <h1> Meer vragen? Neem gerust contact met ons op via:</h1>
       <br>

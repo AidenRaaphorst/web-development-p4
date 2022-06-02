@@ -1,6 +1,7 @@
+<?php include_once("php/connect.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,10 +13,27 @@
 </head>
 
 <body>
-<?php include_once("includes/navbar.php"); ?>
-  <div class="content">
-  </div>
-<?php include_once("includes/footer.php"); ?>
+  <!-- Navbar -->
+  <?php include_once("includes/navbar.php"); ?>
+  
+  <!-- Main -->
+  <main>
+    <?php
+      $sql = "SELECT * FROM reizen WHERE land = :land";
+      $stmt = $connect -> prepare($sql);
+      $stmt -> bindParam(":land", $_GET["land"]);
+      $stmt -> execute();
+      $result = $stmt -> fetchAll();
+
+      foreach($result as $res) { ?>
+        <p><?php echo $res['titel']; ?></p>
+      <?php } ?>
+  </main>
+
+  <!-- Footer -->
+  <?php include_once("includes/footer.php"); ?>
+  
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 
