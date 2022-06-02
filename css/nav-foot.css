@@ -10,6 +10,7 @@ footer {
 }
 
 #footerright {
+    padding: 30px;
     display: flex;
     width: 50%;
     flex-direction: column;
@@ -89,6 +90,11 @@ input[type=submit]:hover {
 
 .navbutton:hover {
     background-image: linear-gradient(to right, #353535, #797979);
+    color: black;
+}
+
+.huidig {
+    background-image: linear-gradient(to right, #474747, #9c9c9c);
     color: black;
 }
 
