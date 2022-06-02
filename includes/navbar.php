@@ -1,6 +1,7 @@
 <div id="navbar">
     <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
-    <a class="navbutton" href="info.php" class="huidig">Info</a>
+    <a class="navbutton" href="index.php">home</a>
+    <a class="navbutton" href="over.php">over</a>
     <div class="dropdown navbutton">
       <p>bestemmingen</p>
       <div class="dropdown-content">
@@ -10,5 +11,5 @@
         </div>
       </div>
     </div>
-    <a class="navbutton" href="">test</a>
+    <a class="navbutton" href="contact.php">contact</a>
   </div>
