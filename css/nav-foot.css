@@ -1,5 +1,6 @@
 footer {
     margin-top: 50px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -23,8 +24,19 @@ footer {
 }
 
 footer h1 {
+    font-size: 30px;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#footerright h2 {
+    text-align: center;
+}
+
+#footerright p {
+    text-align: center;
 }
 
 
@@ -75,8 +87,11 @@ input[type=submit]:hover {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 150px;
     transition: top 0.3s;
+    background-image: url("../img/bergen.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .navbutton {
@@ -86,6 +101,8 @@ input[type=submit]:hover {
     text-decoration: none;
     font-size: 25px;
     border-radius: 10px;
+    background-image: url("../img/Gray-Transparent-Background-1-1170x878.png");
+    background-size: 100% 100%;
 }
 
 .navbutton:hover {
