@@ -12,10 +12,18 @@
 </head>
 
 <body>
-<?php include_once("includes/navbar.php"); ?>
-  <div class="content">
-  </div>
-<?php include_once("includes/footer.php"); ?>
+  <!-- Navbar -->
+  <?php include_once("includes/navbar.php"); ?>
+
+  <!-- Main -->
+  <main>
+    
+  </main>
+  
+  <!-- Footer -->
+  <?php include_once("includes/footer.php"); ?>
+  
+  <!-- Scripts -->
   <script src="js/main.js"></script>
 </body>
 
