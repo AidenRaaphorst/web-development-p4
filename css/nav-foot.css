@@ -1,7 +1,8 @@
 footer {
-	margin-top: 50px;
-	display: flex;
-	flex-direction: column;
+    margin-top: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #footerleft {
@@ -23,8 +24,19 @@ footer {
 }
 
 footer h1 {
-	margin-left: auto;
-	margin-right: auto;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#footerright h2 {
+    text-align: center;
+}
+
+#footerright p {
+    text-align: center;
 }
 
 /* Style inputs with type="text", select elements and textareas */
@@ -67,23 +79,27 @@ input[type="submit"]:hover {
 }
 
 #navbar {
-	display: flex;
-	flex-direction: row;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 100px;
-	transition: top 0.3s;
-	background-color: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    transition: top 0.3s;
+    background-image: url("../img/bergen.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
 }
 
 .navbutton {
-	display: flex;
-	margin: auto;
-	padding: 15px;
-	text-decoration: none;
-	font-size: 25px;
-	border-radius: 10px;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 10px;
+    background-image: url("../img/Gray-Transparent-Background-1-1170x878.png");
+    background-size: 100% 100%;
 }
 
 .navbutton:hover {
