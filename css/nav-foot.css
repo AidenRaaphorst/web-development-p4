@@ -28,30 +28,29 @@ footer h1 {
 }
 
 /* Style inputs with type="text", select elements and textareas */
-
-input[type="text"],
-select,
-textarea {
-	width: 100%;
+footer input[type="text"],
+footer select,
+footer textarea {
 	/* Full width */
-	padding: 12px;
+	width: 100%;
 	/* Some padding */
-	border: 1px solid #ccc;
+	padding: 12px;
 	/* Gray border */
-	border-radius: 4px;
+	border: 1px solid #ccc;
 	/* Rounded borders */
-	box-sizing: border-box;
+	border-radius: 4px;
 	/* Make sure that padding and width stays in place */
-	margin-top: 6px;
+	box-sizing: border-box;
 	/* Add a top margin */
-	margin-bottom: 16px;
+	margin-top: 6px;
 	/* Bottom margin */
-	resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+	margin-bottom: 16px;
+	/* Allow the user to vertically resize the textarea (not horizontally) */
+	resize: vertical;
 }
 
 /* Style the submit button with a specific background color etc */
-
-input[type="submit"] {
+footer input[type="submit"] {
 	background-color: #04aa6d;
 	color: white;
 	padding: 12px 20px;
@@ -61,8 +60,7 @@ input[type="submit"] {
 }
 
 /* When moving the mouse over the submit button, add a darker green color */
-
-input[type="submit"]:hover {
+footer input[type="submit"]:hover {
 	background-color: #45a049;
 }
 
@@ -72,7 +70,8 @@ input[type="submit"]:hover {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	height: 100px;
+	/* height: 100px; */
+	height: 10vh;
 	transition: top 0.3s;
 	background-color: rgba(255, 255, 255, 0.9);
 }
@@ -102,14 +101,12 @@ input[type="submit"]:hover {
 }
 
 /* The container <div> - needed to position the dropdown content */
-
 .dropdown {
 	position: relative;
 	display: inline-block;
 }
 
 /* Dropdown Content (Hidden by Default) */
-
 .dropdown-content {
 	display: none;
 	position: absolute;
@@ -133,15 +130,11 @@ input[type="submit"]:hover {
 }
 
 /* Change color of dropdown links on hover */
-
 .dropdown-content a:hover {
 	background-color: #f1f1f1;
 }
 
 /* Show the dropdown menu on hover */
-
 .dropdown:hover .dropdown-content {
 	display: flex;
 }
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
