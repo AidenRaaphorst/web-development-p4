@@ -2,7 +2,7 @@
   <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
   <a class="navbutton" href="index.php">home</a>
   <div class="dropdown navbutton">
-    <p>bestemmingen</p>
+    <p>Bestemmingen</p>
     <div class="dropdown-content">
       <div>
         <?php
@@ -10,7 +10,7 @@
         $stmt = $connect->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
-
+        
         foreach ($result as $res) { ?>
           <a class="navbutton" href="reizen.php?land=<?php echo $res['land']; ?>"><?php echo $res['land']; ?></a>
         <?php } ?>
