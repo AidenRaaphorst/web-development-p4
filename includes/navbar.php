@@ -1,9 +1,9 @@
 <div id="navbar">
   <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
-  <a class="navbutton" href="index.php">home</a>
-  <a class="navbutton" href="over.php">over</a>
+  <a class="navbutton" href="index.php">Home</a>
+  <a class="navbutton" href="over.php">Over</a>
   <div class="dropdown navbutton">
-    <p>bestemmingen</p>
+    <p>Bestemmingen</p>
     <div class="dropdown-content">
       <div>
         <?php 
@@ -15,9 +15,6 @@
           foreach($result as $res) { ?>
             <a class="navbutton" href="reizen.php?land=<?php echo $res['land']; ?>"><?php echo $res['land']; ?></a>
           <?php } ?>
-
-        <a class="navbutton" href="#">Link 1</a>
-        <a class="navbutton" href="#">Link 2</a>
       </div>
     </div>
   </div>
