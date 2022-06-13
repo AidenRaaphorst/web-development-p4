@@ -3,7 +3,7 @@
   <div id="container1">
     <!-- Footer Left side -->
     <div id="footerleft">
-      <form action="action_page.php">
+      <form id="contactform" action="action_page.php">
 
         <label for="fname">First Name</label>
         <input type="text" id="fname" name="firstname" placeholder="Your name..">
