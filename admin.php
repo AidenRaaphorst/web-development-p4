@@ -1,6 +1,6 @@
 <?php 
-include_once("php/connect.php");
 session_start();
+include_once("php/connect.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,8 +17,15 @@ session_start();
 </head>
 
 <body>
-  <!-- CHECK IF USER IS ADMIN, IF NOT, SEND USER TO LOGIN PAGE -->
+  <?php
+    if(!isset($_SESSION['userinfo']['admin'])) {
+      header("Location: login.php");
+    }
 
+    if(!$_SESSION['userinfo']['admin'] == "1") {
+      header("Location: login.php");
+    }
+  ?>
 
   <!-- Navbar -->
   <?php include_once("includes/navbar.php"); ?>
