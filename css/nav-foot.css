@@ -47,6 +47,7 @@ footer h1 {
 
 
 /* Style inputs with type="text", select elements and textareas */
+
 footer input[type="text"],
 footer select,
 footer textarea {
@@ -72,6 +73,7 @@ footer textarea {
 
 
 /* Style the submit button with a specific background color etc */
+
 footer input[type="submit"] {
     background-color: #04aa6d;
     color: white;
@@ -83,6 +85,7 @@ footer input[type="submit"] {
 
 
 /* When moving the mouse over the submit button, add a darker green color */
+
 footer input[type="submit"]:hover {
     background-color: #45a049;
 }
@@ -126,6 +129,7 @@ footer input[type="submit"]:hover {
 
 
 /* The container <div> - needed to position the dropdown content */
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -133,6 +137,7 @@ footer input[type="submit"]:hover {
 
 
 /* Dropdown Content (Hidden by Default) */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -143,6 +148,7 @@ footer input[type="submit"]:hover {
 
 .dropdown-content div a {
     display: flex;
+    margin: 10px;
 }
 
 .dropdown-content div {
@@ -156,7 +162,9 @@ footer input[type="submit"]:hover {
     box-shadow: 5px 10px #888888;
 }
 
+
 /* Show the dropdown menu on hover */
+
 .dropdown:hover .dropdown-content {
     display: flex;
 }

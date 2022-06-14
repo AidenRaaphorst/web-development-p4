@@ -4,6 +4,12 @@
     /*border-style: ridge;*/
 }
 
+body {
+    background-image: url("../img/bg1.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
 a {
     text-decoration: none;
     color: black;
