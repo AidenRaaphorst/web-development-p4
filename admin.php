@@ -499,8 +499,6 @@ session_start();
     ?>
   </main>
 
-  <!-- Footer -->
-  <?php include_once("includes/footer.php"); ?>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

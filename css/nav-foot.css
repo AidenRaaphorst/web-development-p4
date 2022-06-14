@@ -54,29 +54,45 @@
 	display: flex;
 }
 
-.dropdown-content div {
-	margin-top: 20px;
-	width: 400px;
-	flex-direction: row;
-	display: flex;
-	flex-flow: row wrap;
-	position: relative;
-	background-color: rgba(92, 208, 222, 0.7);
-	box-shadow: 5px 10px #888888;
+/* Style inputs with type="text", select elements and textareas */
+footer input[type="text"],
+footer select,
+footer textarea {
+    height: 50px;
+    max-height: 100px;
+    width: 100%;
+    /* Full width */
+    padding: 12px;
+    /* Some padding */
+    border: 1px solid #ccc;
+    /* Gray border */
+    border-radius: 4px;
+    /* Rounded borders */
+    box-sizing: border-box;
+    /* Make sure that padding and width stays in place */
+    margin-top: 6px;
+    /* Add a top margin */
+    margin-bottom: 16px;
+    /* Bottom margin */
+    resize: vertical;
+    /* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-	display: flex;
+
+/* Style the submit button with a specific background color etc */
+footer input[type="submit"] {
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
-footer {
-	margin-top: 50px;
-	padding: 20px;
-	display: flex;
-	flex-direction: column;
-	height: 500px;
-	background-color: #66c1cc;
+
+/* When moving the mouse over the submit button, add a darker green color */
+footer input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
 #footerleft {
@@ -109,36 +125,25 @@ footer h1 {
 	text-align: center;
 }
 
-#footerright p {
-	text-align: center;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-#contactform {
-	height: 250px;
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
 }
 
-/* Style inputs with type="text", select elements and textareas */
-footer input[type="text"],
-footer select,
-footer textarea {
-	height: 50px;
-	max-height: 100px;
-	width: 100%;
-	/* Full width */
-	padding: 12px;
-	/* Some padding */
-	border: 1px solid #ccc;
-	/* Gray border */
-	border-radius: 4px;
-	/* Rounded borders */
-	box-sizing: border-box;
-	/* Make sure that padding and width stays in place */
-	margin-top: 6px;
-	/* Add a top margin */
-	margin-bottom: 16px;
-	/* Bottom margin */
-	resize: vertical;
-	/* Allow the user to vertically resize the textarea (not horizontally) */
+.dropdown-content div a {
+    display: flex;
+    margin: 10px;
 }
 
 /* Style the submit button with a specific background color etc */
@@ -151,7 +156,8 @@ footer input[type="submit"] {
 	cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
-footer input[type="submit"]:hover {
-	background-color: #45a049;
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: flex;
 }
+

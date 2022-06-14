@@ -3,26 +3,17 @@
   <div id="container1">
     <!-- Footer Left side -->
     <div id="footerleft">
-      <form id="contactform" action="action_page.php">
+    <form id="contactform" name="contactform" action="php/contactbackend.php" method="post">
+        <label >naam</label>
+        <input type="text" maxlength="32" name="naam" required>
 
-        <label for="fname">First Name</label>
-        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label >email</label>
+        <input type="text" maxlength="32" name="email" required>
 
-        <label for="lname">Last Name</label>
-        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label >bericht</label>
+        <textarea type="text" name="bericht" maxlength="255" required></textarea>
 
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="australia">Australia</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-
-        <label for="subject">Subject</label>
-        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-        <input type="submit" value="Submit">
-
+        <input type="submit" name="berichtsubmit" value="verstuur">
       </form>
     </div>
 
