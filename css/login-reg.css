@@ -11,29 +11,37 @@ main.flex {
 	align-items: center;
 }
 
-#loginform {
+#loginform,
+#registerform {
 	width: 400px;
-	height: 300px;
+	/* height: 300px; */
+	height: auto;
+	min-height: 200px;
 	margin-top: 50px;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	border-radius: 20px;
 	background-color: #66c1cc;
 }
 
-#loginform input {
+#loginform input,
+#registerform input {
 	border: none;
 	background-color: #eef0f3;
 }
 
-#loginform input:not([type="submit"]) {
+#loginform input:not([type="submit"]),
+#registerform input:not([type="submit"]) {
 	margin-bottom: 20px;
 }
 
 .textbox {
 	width: 200px;
+	padding: 5px;
+	border-radius: 5px;
 }
 
 input[type="submit"] {

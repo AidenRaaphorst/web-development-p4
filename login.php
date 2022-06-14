@@ -12,7 +12,7 @@ include_once("php/connect.php");
   <title>Ria's</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav-foot.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/login-reg.css">
   <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 </head>
 
@@ -33,7 +33,6 @@ include_once("php/connect.php");
       <a href="registreer.php">Registreren</a>
     </form>
   </main>
-
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
