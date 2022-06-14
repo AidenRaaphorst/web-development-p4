@@ -21,12 +21,6 @@ include_once("php/connect.php");
 
   <!-- Main -->
   <main>
-    <?php
-      var_dump($_SESSION);
-      if(isset($_SESSION['userinfo'])) { 
-        echo "<p>".$_SESSION['userinfo']['email']."</p>";
-      } 
-    ?>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et sem congue, iaculis ante et, facilisis enim. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam quis nisi at est viverra sagittis. Nullam eget lacinia velit. Mauris sagittis urna ut leo sagittis commodo. Donec pellentesque porta urna sed fermentum. Curabitur pretium nisi metus, sit amet porttitor elit porttitor ac. In hac habitasse platea dictumst. Etiam tempor, sem quis placerat dapibus, nisl mi sodales sem, tempus ullamcorper eros ante nec odio.
       Morbi a convallis ligula. Nunc lacinia, felis at mattis placerat, est enim tincidunt nibh, nec tempor sem diam quis odio. Curabitur mattis, urna non tincidunt bibendum, eros justo iaculis sem, et fermentum metus sapien vel erat. Suspendisse dignissim neque eu leo suscipit accumsan. Praesent consectetur maximus fermentum. Nullam sollicitudin, nunc consectetur fermentum porttitor, turpis leo ullamcorper leo, a volutpat erat mi vel nibh. Proin a massa ac sapien facilisis aliquet. Pellentesque sodales nisl sit amet ultrices scelerisque. Mauris a mauris est. Aenean at consectetur lorem. Proin interdum rutrum erat vel imperdiet. Maecenas ullamcorper scelerisque volutpat. Fusce tincidunt tempus bibendum.
