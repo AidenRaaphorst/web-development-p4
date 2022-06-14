@@ -1,53 +1,60 @@
-footer {
-    margin-top: 50px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    background-color: #66C1CC;
+#navbar {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 150px;
+	transition: top 0.3s;
+	background-color: rgba(92, 208, 222, 0.7);
 }
 
-#footerleft {
-    display: flex;
-    width: 50%;
+.navbutton {
+	display: flex;
+	margin: auto;
+	padding: 15px;
+	text-decoration: none;
+	font-size: 25px;
+	border-radius: 10px;
+	background-size: 100% 100%;
+	background-color: rgba(92, 208, 222);
 }
 
-#footerright {
-    padding: 30px;
-    display: flex;
-    width: 50%;
-    flex-direction: column;
+.navbutton:hover {
+	background-color: rgb(106, 231, 245);
+	color: black;
 }
 
-#container1 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+.huidig {
+	background-image: linear-gradient(to right, #474747, #9c9c9c);
+	color: black;
 }
 
-footer h1 {
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+#navbar h1 {
+	font-size: 70px;
+	margin: 20px;
 }
 
-#footerright h2 {
-    text-align: center;
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+	position: relative;
+	display: inline-block;
 }
 
-#footerright p {
-    text-align: center;
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+	display: none;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	z-index: 1;
 }
 
-#contactform {
-    height: 250px;
+.dropdown-content div a {
+	display: flex;
 }
-
 
 /* Style inputs with type="text", select elements and textareas */
-
 footer input[type="text"],
 footer select,
 footer textarea {
@@ -73,7 +80,6 @@ footer textarea {
 
 
 /* Style the submit button with a specific background color etc */
-
 footer input[type="submit"] {
     background-color: #04aa6d;
     color: white;
@@ -85,51 +91,41 @@ footer input[type="submit"] {
 
 
 /* When moving the mouse over the submit button, add a darker green color */
-
 footer input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-#navbar {
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 150px;
-    transition: top 0.3s;
-    background-color: rgba(92, 208, 222, 0.7);
+#footerleft {
+	display: flex;
+	width: 50%;
 }
 
-.navbutton {
-    display: flex;
-    margin: auto;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 25px;
-    border-radius: 10px;
-    background-size: 100% 100%;
-    background-color: rgba(92, 208, 222);
+#footerright {
+	padding: 30px;
+	display: flex;
+	width: 50%;
+	flex-direction: column;
 }
 
-.navbutton:hover {
-    background-color: rgb(106, 231, 245);
-    color: black;
+#container1 {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
-.huidig {
-    background-image: linear-gradient(to right, #474747, #9c9c9c);
-    color: black;
+footer h1 {
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
-#navbar h1 {
-    font-size: 70px;
-    margin: 20px;
+#footerright h2 {
+	text-align: center;
 }
-
 
 /* The container <div> - needed to position the dropdown content */
-
 .dropdown {
     position: relative;
     display: inline-block;
@@ -137,7 +133,6 @@ footer input[type="submit"]:hover {
 
 
 /* Dropdown Content (Hidden by Default) */
-
 .dropdown-content {
     display: none;
     position: absolute;
@@ -151,20 +146,18 @@ footer input[type="submit"]:hover {
     margin: 10px;
 }
 
-.dropdown-content div {
-    margin-top: 20px;
-    width: 400px;
-    flex-direction: row;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    background-color: rgba(92, 208, 222, 0.7);
-    box-shadow: 5px 10px #888888;
+/* Style the submit button with a specific background color etc */
+footer input[type="submit"] {
+	background-color: #04aa6d;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
-
 /* Show the dropdown menu on hover */
-
 .dropdown:hover .dropdown-content {
     display: flex;
 }
+
