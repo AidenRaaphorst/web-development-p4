@@ -1,28 +1,48 @@
 #loginbody {
-    height: 100vh;
-    background-image: url("../img/tropisch.jpg");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
+	height: 100vh;
+	background-image: url("../img/tropisch.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+main.flex {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #loginform {
-    margin-top: 50px;
-    background-color: #66C1CC;
-    height: 200px;
-    width: 400px;
-    padding: 20px;
+	width: 400px;
+	height: 300px;
+	margin-top: 50px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 20px;
+	background-color: #66c1cc;
 }
 
 #loginform input {
-    margin: 10px;
-    background-color: #EEF0F3;
-    border: none;
+	border: none;
+	background-color: #eef0f3;
 }
 
-#textbox {
-    width: 100%;
+#loginform input:not([type="submit"]) {
+	margin-bottom: 20px;
 }
 
-input[type=submit] {
-    color: black;
+.textbox {
+	width: 200px;
+}
+
+input[type="submit"] {
+	color: black;
+}
+
+.form-button {
+	width: 100px;
+	height: 30px;
+	margin-bottom: 10px;
+	border: none;
 }
