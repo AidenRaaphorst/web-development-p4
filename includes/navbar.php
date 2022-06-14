@@ -17,6 +17,5 @@
       </div>
     </div>
   </div>
-  <a class="navbutton" href="contact.php">contact</a>
   <a class="navbutton" href="login.php">inloggen</a>
 </div>
