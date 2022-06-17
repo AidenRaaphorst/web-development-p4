@@ -1,4 +1,7 @@
-<?php include_once("php/connect.php"); ?>
+<?php 
+session_start();
+include_once("php/connect.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -55,6 +58,7 @@
     Morbi mollis neque lorem, sit amet lacinia odio lacinia ut. Sed commodo porttitor turpis a pulvinar. Maecenas neque ipsum, pellentesque nec tincidunt et, malesuada sed enim. Vivamus pulvinar consequat ante, vel efficitur diam placerat et. Mauris vel leo a quam egestas tempor. Etiam a libero ipsum. Aenean sagittis ante in mi ornare, porta tincidunt libero sollicitudin. Proin mollis laoreet dolor, consectetur convallis massa blandit blandit. Etiam facilisis euismod tellus, ac pharetra lorem elementum vitae. In congue nunc vitae aliquet sollicitudin. Quisque rhoncus urna maximus tincidunt fringilla.
     Phasellus sollicitudin tincidunt vehicula. Phasellus eu elementum lectus. Suspendisse ut elit tempus, fermentum mi vel, sodales nisi. Nullam ac eleifend ex. In ac purus nec velit tincidunt iaculis. Nulla pretium ornare sapien. Praesent dignissim interdum eros, a tincidunt sem vestibulum a. Fusce posuere urna a ligula semper, ut vehicula diam fermentum.
     Maecenas non lacus tempus, tristique lorem vel, venenatis libero. Fusce id auctor ipsum, in accumsan nisl. Maecenas at mollis risus, ut pulvinar quam. Nam ultrices sodales sagittis. Suspendisse potenti. Nulla convallis aliquet tellus at consequat. Etiam convallis et lacus efficitur tincidunt. Praesent at mi ut sem convallis maximus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed convallis condimentum ipsum tempor mollis. Fusce non malesuada orci.
+
   </main>
 
   <!-- Footer -->
