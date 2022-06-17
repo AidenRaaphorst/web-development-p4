@@ -12,7 +12,7 @@ include_once("php/connect.php");
   <title>Ria's</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/nav-foot.css">
-  <link rel="stylesheet" href="css/login.css">
+  <link rel="stylesheet" href="css/login-reg.css">
   <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 </head>
 
@@ -23,6 +23,16 @@ include_once("php/connect.php");
   <!-- Main -->
   <main class="flex">
     <form id="loginform" action="php/login.php" method="post">
+      <?php
+        if(isset($_GET['error'])) {
+          if($_GET['error'] == "email") { ?>
+            <b id="error">Email kan niet gevonden worden.</b>
+          <?php } else if($_GET['error'] == "password") { ?>
+            <b id="error">Het wachtwoord klopt niet.</b>
+          <?php }
+        }
+      ?>
+
       <label for="username">Email:</label>
       <input class="textbox" type="email" name="email" required>
 
@@ -34,9 +44,9 @@ include_once("php/connect.php");
     </form>
   </main>
 
-
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/validateForm.js"></script>
 </body>
 
 </html>

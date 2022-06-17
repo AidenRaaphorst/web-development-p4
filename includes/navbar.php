@@ -1,6 +1,6 @@
 <div id="navbar">
   <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
-  <a class="navbutton" href="index.php">home</a>
+  <a class="navbutton" href="index.php">Home</a>
   <div class="dropdown navbutton">
     <p>Bestemmingen</p>
     <div class="dropdown-content">
@@ -17,6 +17,46 @@
       </div>
     </div>
   </div>
+  <?php
+    if(!isset($_SESSION['userinfo'])) { ?>
+      <a class="navbutton" href="login.php">Inloggen</a>
+    <?php } else { ?>
+      <p id="account-button" class="navbutton">Account</p>
+      <div class="account-dropdown">
+        <div class="account-dropdown-name">
+          <h2><?php echo $_SESSION['userinfo']['naam']; ?></h2>
+        </div>
+
+        <div class="account-dropdown-boekingen">
+          <h3>Boekingen:</h3>
+          <ul>
+            <?php
+              $sql = "SELECT * FROM boekingen WHERE gebruikerID = :gebruikerID ORDER BY datum DESC";
+              $stmt = $connect -> prepare($sql);
+              $stmt -> bindParam(":gebruikerID", $_SESSION['userinfo']['gebruikerID']);
+              $stmt -> execute();
+              $boekingen = $stmt -> fetchAll();
+
+              foreach($boekingen as $boeking) { 
+                $sql = "SELECT * FROM reizen WHERE reisID = :reisID";
+                $stmt = $connect -> prepare($sql);
+                $stmt -> bindParam(":reisID", $boeking['reisID']);
+                $stmt -> execute();
+                $reis = $stmt -> fetch();
+              ?>
+                <li>
+                  <?php echo $reis['land'].": ".$reis['titel']; ?>
+                  <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
+                </li>
+              <?php } ?>
+          </ul>
+        </div>
+
+        <div class="account-dropdown-misc">
+          <a href="php/logout.php"><b>Uitloggen</b></a>
+        </div>
+      </div>
+    <?php } ?>
   <a class="navbutton" href="over.php">over ons</a>
   <a class="navbutton" href="login.php">inloggen</a>
 </div>
