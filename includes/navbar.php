@@ -17,7 +17,6 @@
       </div>
     </div>
   </div>
-  <a class="navbutton" href="contact.php">Contact</a>
   <?php
     if(!isset($_SESSION['userinfo'])) { ?>
       <a class="navbutton" href="login.php">Inloggen</a>
@@ -58,4 +57,6 @@
         </div>
       </div>
     <?php } ?>
+  <a class="navbutton" href="over.php">over ons</a>
+  <a class="navbutton" href="login.php">inloggen</a>
 </div>
