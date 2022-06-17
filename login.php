@@ -1,4 +1,6 @@
-<?php include_once("php/connect.php"); ?>
+<?php
+include_once("php/connect.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,14 +22,14 @@
 
   <!-- Main -->
   <main class="flex">
-    <form id="loginform" name="login" action="php/login.php" method="post">
+    <form id="loginform" action="php/login.php" method="post">
       <label for="username">Email:</label>
-      <input class="textbox" type="text" name="email" required>
+      <input class="textbox" type="email" name="email" required>
 
       <label for="password"> Wachtwoord:</label>
       <input class="textbox" type="password" name="password" required>
 
-      <input class="form-button" type="submit" name="submit" value="Inloggen"/>
+      <input class="form-button" type="submit" name="login" value="Inloggen"/>
       <a href="registreer.php">Registreren</a>
     </form>
   </main>
