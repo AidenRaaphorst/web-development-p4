@@ -3,6 +3,7 @@
   <div id="container1">
     <!-- Footer Left side -->
     <div id="footerleft">
+      <h1>Stuur ons een bericht</h1>
     <form id="contactform" name="contactform" action="php/contactbackend.php" method="post">
         <label >naam</label>
         <input type="text" maxlength="32" name="naam" required>
@@ -19,7 +20,7 @@
 
     <!-- Footer Right side -->
     <div id="footerright">
-      <h1> Meer vragen? Neem gerust contact met ons op via:</h1>
+      <h1> Of neem gerust contact met ons op via:</h1>
       <br>
       <h2>Mail</h2>
       <p>mail.mail.com</p>
