@@ -9,6 +9,7 @@
     <title>Ria's</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/nav-foot.css">
+    <link rel="stylesheet" href="css/login.css">
     <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
 </head>
 
