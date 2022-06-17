@@ -23,6 +23,16 @@ include_once("php/connect.php");
   <!-- Main -->
   <main class="flex">
     <form id="loginform" action="php/login.php" method="post">
+      <?php
+        if(isset($_GET['error'])) {
+          if($_GET['error'] == "email") { ?>
+            <b id="error">Email kan niet gevonden worden.</b>
+          <?php } else if($_GET['error'] == "password") { ?>
+            <b id="error">Het wachtwoord klopt niet.</b>
+          <?php }
+        }
+      ?>
+
       <label for="username">Email:</label>
       <input class="textbox" type="email" name="email" required>
 
@@ -36,6 +46,7 @@ include_once("php/connect.php");
 
   <!-- Scripts -->
   <script src="js/main.js"></script>
+  <script src="js/validateForm.js"></script>
 </body>
 
 </html>
