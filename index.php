@@ -1,4 +1,7 @@
-<?php include_once("php/connect.php"); ?>
+<?php 
+session_start();
+include_once("php/connect.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +23,7 @@
 
   <!-- Main -->
   <main>
+
     <div id="row1">
 
       <p>
@@ -53,7 +57,6 @@
       </div>
 
     </div>
-
   </main>
 
   <!-- Footer -->
