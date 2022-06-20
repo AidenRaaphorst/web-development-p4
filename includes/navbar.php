@@ -16,7 +16,7 @@
         <?php } ?>
       </div>
     </div>
-  </div>
+  </div>  
   <a class="navbutton" href="over.php">Over ons</a>
   <a class="navbutton" href="contact.php">Contact</a>
 
@@ -46,11 +46,13 @@
                 $stmt -> bindParam(":reisID", $boeking['reisID']);
                 $stmt -> execute();
                 $reis = $stmt -> fetch();
-              ?>
-                <li>
-                  <?php echo $reis['land'].": ".$reis['titel']; ?>
-                  <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
-                </li>
+
+                if($reis) { ?>
+                  <li>
+                    <?php echo $reis['land'].": ".$reis['titel']; ?>
+                    <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
+                  </li>
+                <?php } ?>
               <?php } ?>
           </ul>
         </div>
