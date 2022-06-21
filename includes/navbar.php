@@ -12,11 +12,11 @@
         $result = $stmt->fetchAll();
         
         foreach ($result as $res) { ?>
-          <a class="navbutton" href="reizen.php?land=<?php echo $res['land']; ?>"><?php echo $res['land']; ?></a>
+          <a class="navbutton" href="reizen.php?land=<?php echo $res['land']; ?>"><?php echo ucfirst($res['land']); ?></a>
         <?php } ?>
       </div>
     </div>
-  </div>  
+  </div>
   <a class="navbutton" href="over.php">Over ons</a>
   <a class="navbutton" href="contact.php">Contact</a>
 
@@ -49,7 +49,7 @@
 
                 if($reis) { ?>
                   <li>
-                    <?php echo $reis['land'].": ".$reis['titel']; ?>
+                    <?php echo ucfirst($reis['land']).": ".ucfirst($reis['titel']); ?>
                     <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
                   </li>
                 <?php } ?>
