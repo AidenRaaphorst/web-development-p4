@@ -498,7 +498,7 @@ include_once("php/connect.php");
                   <td><p><?php echo $res['prijs']; ?></p></td>
                   <td><p><?php echo $res['sterren']; ?></p></td>
                   <td class="long-text"><p><?php echo $res['beschrijving']; ?></p></td>
-                  <td><p><?php echo $res['img']; ?></p></td>
+                  <td class="long-text-img"><p><?php echo $res['img']; ?></p></td>
   
                   <td><a href="php/sendtodb.php?reisID=<?php echo $res['reisID']; ?>">Edit</a></td>
                   <td><a href="php/sendtodb.php?reisID=<?php echo $res['reisID']; ?>&delete=true">Delete</a></td>
