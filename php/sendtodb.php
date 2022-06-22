@@ -4,11 +4,14 @@ session_start();
 
 
 // CHECK IF USER IS ADMIN, IF NOT, SEND USER TO LOGIN PAGE
+if(!isset($_SESSION['userinfo']['admin'])) {
+  header("Location: ../index.php");
+}
 
+if($_SESSION['userinfo']['admin'] != 1) {
+  header("Location: ../index.php");
+}
 
-debug();
-
-// Hier komt alle logica voor create en update voor elke database
 // Read & Delete
 if(isset($_GET['boekingID'])) {
   if(isset($_GET['delete']) && $_GET['delete'] == "true") {
@@ -129,6 +132,7 @@ if(isset($_GET['boekingID'])) {
   $_SESSION['prijs'] = $result['prijs'];
   $_SESSION['sterren'] = $result['sterren'];
   $_SESSION['beschrijving'] = $result['beschrijving'];
+  $_SESSION['img'] = $result['img'];
   
   header("Location: ../admin.php?database=reizen");
 }
@@ -248,8 +252,8 @@ if($_POST['table'] == "boekingen") {
   }
 } else if($_POST['table'] == "reizen") {
   if(isset($_POST['create'])) {
-    $sql = "INSERT INTO reizen (reisID, beginDatum, eindDatum, land, titel, prijs, sterren, beschrijving) 
-            VALUES(:reisID, :beginDatum, :eindDatum, :land, :titel, :prijs, :sterren, :beschrijving)";
+    $sql = "INSERT INTO reizen (reisID, beginDatum, eindDatum, land, titel, prijs, sterren, beschrijving, img) 
+            VALUES(:reisID, :beginDatum, :eindDatum, :land, :titel, :prijs, :sterren, :beschrijving, :img)";
     $stmt = $connect -> prepare($sql);
     $stmt -> bindParam(":reisID", $_POST["reisID"]);
     $stmt -> bindParam(":beginDatum", $_POST["beginDatum"]);
@@ -259,6 +263,7 @@ if($_POST['table'] == "boekingen") {
     $stmt -> bindParam(":prijs", $_POST["prijs"]);
     $stmt -> bindParam(":sterren", $_POST["sterren"]);
     $stmt -> bindParam(":beschrijving", $_POST["beschrijving"]);
+    $stmt -> bindParam(":img", $_POST["img"]);
     $stmt -> execute();
     
     header("Location: ../admin.php?database=reizen");
@@ -266,7 +271,7 @@ if($_POST['table'] == "boekingen") {
   
   if(isset($_POST['update'])) {
     $sql = "UPDATE reizen
-            SET beginDatum = :beginDatum, eindDatum = :eindDatum, land = :land, titel = :titel, prijs = :prijs, sterren = :sterren, beschrijving = :beschrijving
+            SET beginDatum = :beginDatum, eindDatum = :eindDatum, land = :land, titel = :titel, prijs = :prijs, sterren = :sterren, beschrijving = :beschrijving, img = :img
             WHERE reisID = :reisID";
     $stmt = $connect -> prepare($sql);
     $stmt -> bindParam(":reisID", $_POST["reisID"]);
@@ -277,29 +282,11 @@ if($_POST['table'] == "boekingen") {
     $stmt -> bindParam(":prijs", $_POST["prijs"]);
     $stmt -> bindParam(":sterren", $_POST["sterren"]);
     $stmt -> bindParam(":beschrijving", $_POST["beschrijving"]);
+    $stmt -> bindParam(":img", $_POST["img"]);
     $stmt -> execute();
     
     header("Location: ../admin.php?database=reizen");
   }
-}
-
-
-
-
-
-
-
-function debug() {
-  echo "_GET:";
-  echo "<br>";
-  echo var_dump($_GET);
-
-  echo "<br>";
-  echo "<br>";
-
-  echo "_POST:";
-  echo "<br>";
-  echo var_dump($_POST);
 }
 
 ?>

@@ -396,6 +396,7 @@ include_once("php/connect.php");
             $prijs = isset($_SESSION['prijs']) ? $_SESSION['prijs'] : "";
             $sterren = isset($_SESSION['sterren']) ? $_SESSION['sterren'] : "";
             $beschrijving = isset($_SESSION['beschrijving']) ? $_SESSION['beschrijving'] : "";
+            $img = isset($_SESSION['img']) ? $_SESSION['img'] : "";
             
             unset($_SESSION['reisID']);
             unset($_SESSION['beginDatum']);
@@ -405,6 +406,7 @@ include_once("php/connect.php");
             unset($_SESSION['prijs']);
             unset($_SESSION['sterren']);
             unset($_SESSION['beschrijving']);
+            unset($_SESSION['img']);
           ?>
 
           <form action="php/sendtodb.php" method="post" class="create-update">
@@ -450,6 +452,11 @@ include_once("php/connect.php");
                 <td><label for="beschrijving">beschrijving</label></td>
                 <td><textarea type="text" name="beschrijving"><?php echo $beschrijving; ?></textarea></td>
               </tr>
+
+              <tr>
+                <td><label for="img">img</label></td>
+                <td><textarea type="text" name="img"><?php echo $img; ?></textarea></td>
+              </tr>
             </table>
             
             <input type="submit" name="<?php echo $submitText; ?>" value="<?php echo ucfirst($submitText); ?>">
@@ -469,6 +476,7 @@ include_once("php/connect.php");
                 <th>prijs</th>
                 <th>sterren</th>
                 <th>beschrijving</th>
+                <th>img</th>
   
                 <th>Edit</th>
                 <th>Delete</th>
@@ -490,6 +498,7 @@ include_once("php/connect.php");
                   <td><p><?php echo $res['prijs']; ?></p></td>
                   <td><p><?php echo $res['sterren']; ?></p></td>
                   <td class="long-text"><p><?php echo $res['beschrijving']; ?></p></td>
+                  <td class="long-text-img"><p><?php echo $res['img']; ?></p></td>
   
                   <td><a href="php/sendtodb.php?reisID=<?php echo $res['reisID']; ?>">Edit</a></td>
                   <td><a href="php/sendtodb.php?reisID=<?php echo $res['reisID']; ?>&delete=true">Delete</a></td>

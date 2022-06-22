@@ -40,6 +40,11 @@
 	overflow-y: scroll;
 }
 
+.long-text-img {
+	overflow-y: scroll;
+	word-break: break-all;
+}
+
 .create-update {
 	margin: 20px;
 }
