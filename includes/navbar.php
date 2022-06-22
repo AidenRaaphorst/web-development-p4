@@ -2,7 +2,7 @@
   <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
   <a class="navbutton" href="index.php">Home</a>
   <div class="dropdown navbutton">
-    <p>Bestemmingen</p>
+  <a id="bestemmingbutton"href="reizen.php"><p>Bestemmingen</p></a>
     <div class="dropdown-content">
       <div>
         <?php
@@ -10,56 +10,56 @@
         $stmt = $connect->prepare($sql);
         $stmt->execute();
         $result = $stmt->fetchAll();
-        
+
         foreach ($result as $res) { ?>
           <a class="navbutton" href="reizen.php?land=<?php echo $res['land']; ?>"><?php echo $res['land']; ?></a>
         <?php } ?>
       </div>
     </div>
-  </div>  
+  </div>
   <a class="navbutton" href="over.php">Over ons</a>
   <a class="navbutton" href="contact.php">Contact</a>
 
   <?php
-    if(!isset($_SESSION['userinfo'])) { ?>
-      <a class="navbutton" href="login.php">Inloggen</a>
-    <?php } else { ?>
-      <p id="account-button" class="navbutton">Account</p>
-      <div class="account-dropdown">
-        <div class="account-dropdown-name">
-          <h2><?php echo $_SESSION['userinfo']['naam']; ?></h2>
-        </div>
-
-        <div class="account-dropdown-boekingen">
-          <h3>Boekingen:</h3>
-          <ul>
-            <?php
-              $sql = "SELECT * FROM boekingen WHERE gebruikerID = :gebruikerID ORDER BY datum DESC";
-              $stmt = $connect -> prepare($sql);
-              $stmt -> bindParam(":gebruikerID", $_SESSION['userinfo']['gebruikerID']);
-              $stmt -> execute();
-              $boekingen = $stmt -> fetchAll();
-
-              foreach($boekingen as $boeking) { 
-                $sql = "SELECT * FROM reizen WHERE reisID = :reisID";
-                $stmt = $connect -> prepare($sql);
-                $stmt -> bindParam(":reisID", $boeking['reisID']);
-                $stmt -> execute();
-                $reis = $stmt -> fetch();
-
-                if($reis) { ?>
-                  <li>
-                    <?php echo $reis['land'].": ".$reis['titel']; ?>
-                    <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
-                  </li>
-                <?php } ?>
-              <?php } ?>
-          </ul>
-        </div>
-
-        <div class="account-dropdown-misc">
-          <a href="php/logout.php"><b>Uitloggen</b></a>
-        </div>
+  if (!isset($_SESSION['userinfo'])) { ?>
+    <a class="navbutton" href="login.php">Inloggen</a>
+  <?php } else { ?>
+    <p id="account-button" class="navbutton">Account</p>
+    <div class="account-dropdown">
+      <div class="account-dropdown-name">
+        <h2><?php echo $_SESSION['userinfo']['naam']; ?></h2>
       </div>
-    <?php } ?>
+
+      <div class="account-dropdown-boekingen">
+        <h3>Boekingen:</h3>
+        <ul>
+          <?php
+          $sql = "SELECT * FROM boekingen WHERE gebruikerID = :gebruikerID ORDER BY datum DESC";
+          $stmt = $connect->prepare($sql);
+          $stmt->bindParam(":gebruikerID", $_SESSION['userinfo']['gebruikerID']);
+          $stmt->execute();
+          $boekingen = $stmt->fetchAll();
+
+          foreach ($boekingen as $boeking) {
+            $sql = "SELECT * FROM reizen WHERE reisID = :reisID";
+            $stmt = $connect->prepare($sql);
+            $stmt->bindParam(":reisID", $boeking['reisID']);
+            $stmt->execute();
+            $reis = $stmt->fetch();
+
+            if ($reis) { ?>
+              <li>
+                <?php echo $reis['land'] . ": " . $reis['titel']; ?>
+                <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
+              </li>
+            <?php } ?>
+          <?php } ?>
+        </ul>
+      </div>
+
+      <div class="account-dropdown-misc">
+        <a href="php/logout.php"><b>Uitloggen</b></a>
+      </div>
+    </div>
+  <?php } ?>
 </div>

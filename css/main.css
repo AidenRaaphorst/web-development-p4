@@ -97,5 +97,127 @@ main.flex {
 }
 
 .button:hover {
+    color: #FFFFFF;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255);
+    cursor: pointer;
+}
+
+#bestemmingcontainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#bestemmingmain {
+    margin-top: 250px;
+}
+
+.bestemming {
+    display: flex;
+    width: fit-content;
+    height: 260px;
+    padding: 15px;
     background-color: #66C1CC;
+    margin: 30px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.bestemming p {
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#bestemmingknoppen {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.leesmeer {
+    float: right;
+    margin-left: auto;
+    padding: 0.3em 1.2em;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #4e9af1;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.leesmeer:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.bestemminggroot {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 25px;
+    background-color: #66C1CC;
+    margin: 30px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.bestemminggroot h1 {
+    width: 100%;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.bestemminggroot p {
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.boeken {
+    width: 100px;
+    height: 40px;
+    float: right;
+    margin-left: auto;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-color: #4e9af1;
+    text-shadow: 0 0.04em 0.04em rgba(0, 0, 0, 0.35);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.bestemmingimg {
+    margin-top: 20px;
+    object-fit: contain;
+}
+
+.boeken:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+#beschrijving {
+    font-size: 20px;
+}
+
+#datum {
+    font-size: 20px;
 }
