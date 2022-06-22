@@ -1,48 +1,55 @@
 #navbar {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 150px;
-	display: flex;
-	flex-direction: row;
-	transition: top 0.3s;
-	background-color: rgba(92, 208, 222, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    transition: top 0.3s;
+    background-color: rgba(92, 208, 222, 0.7);
 }
 
 .huidig {
-	background-image: linear-gradient(to right, #474747, #9c9c9c);
-	color: black;
-	display: flex;
-	flex-direction: row;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: 150px;
-	transition: top 0.3s;
-	background-color: rgba(92, 208, 222, 0.7);
+    background-image: linear-gradient(to right, #474747, #9c9c9c);
+    color: black;
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 150px;
+    transition: top 0.3s;
+    background-color: rgba(92, 208, 222, 0.7);
 }
 
 .navbutton {
-	display: flex;
-	margin: auto;
-	padding: 15px;
-	text-decoration: none;
-	font-size: 25px;
-	border-radius: 10px;
-	background-size: 100% 100%;
-	background-color: rgb(106, 231, 245);
-	user-select: none;
+    display: flex;
+    margin: auto;
+    padding: 15px;
+    text-decoration: none;
+    font-size: 25px;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    background-color: rgb(106, 231, 245);
+    user-select: none;
+    transition: all 0.2s;
 }
 
 .navbutton:hover {
-	background-color: rgba(92, 208, 222);
-	color: black;
-	cursor: pointer;
+    color: #FFFFFF;
+    border: 0.16em solid rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255);
+    cursor: pointer;
 }
 
 #navbar h1 {
 	font-size: 70px;
 	margin: 20px;
+}
+
+
+.dropdown:hover #bestemmingbutton {
+    color: #FFFFFF;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -138,6 +145,7 @@
 	color: rgb(159, 0, 0);
 }
 
+
 /* Style inputs with type="text", select elements and textareas */
 
 footer input[type="text"],
@@ -173,19 +181,23 @@ footer {
 	background-color: #66c1cc;
 }
 
+
 /* Style the submit button with a specific background color etc */
+
 footer input[type="submit"] {
-	background-color: #04aa6d;
-	color: white;
-	padding: 12px 20px;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+    background-color: #04aa6d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
+
 /* When moving the mouse over the submit button, add a darker green color */
+
 footer input[type="submit"]:hover {
-	background-color: #45a049;
+    background-color: #45a049;
 }
 
 #footerleft {
@@ -221,23 +233,24 @@ footer h1 {
 /* The container <div> - needed to position the dropdown content */
 
 .dropdown {
-	position: relative;
-	display: inline-block;
+    position: relative;
+    display: inline-block;
 }
+
 
 /* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
-	display: none;
-	position: absolute;
-	width: fit-content;
-	height: fit-content;
-	z-index: 1;
+    display: none;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    z-index: 1;
 }
 
 .dropdown-content div a {
-	display: flex;
-	margin: 10px;
+    display: flex;
+    margin: 10px;
 }
 
 /* Style the submit button with a specific background color etc */
