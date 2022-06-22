@@ -43,107 +43,106 @@
 }
 
 #navbar h1 {
-    font-size: 70px;
-    margin: 20px;
+	font-size: 70px;
+	margin: 20px;
 }
+
 
 .dropdown:hover #bestemmingbutton {
     color: #FFFFFF;
 }
 
-
 /* The container <div> - needed to position the dropdown content */
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .dropdown-content div {
-    margin-top: 20px;
-    width: 300px;
-    flex-direction: row;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    background-color: rgba(92, 208, 222, 0.7);
-    margin-top: 20px;
-    width: 300;
-    flex-direction: row;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-    background-color: rgba(92, 208, 222, 0.9);
-    box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
+	margin-top: 20px;
+	width: 300px;
+	flex-direction: row;
+	display: flex;
+	flex-flow: row wrap;
+	position: relative;
+	background-color: rgba(92, 208, 222, 0.7);
+	margin-top: 20px;
+	width: 300;
+	flex-direction: row;
+	display: flex;
+	flex-flow: row wrap;
+	position: relative;
+	background-color: rgba(92, 208, 222, 0.9);
+	box-shadow: 10px 10px rgba(0, 0, 0, 0.8);
 }
-
 
 /* Dropdown Content (Hidden by Default) */
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    width: fit-content;
-    height: fit-content;
-    z-index: 1;
+	display: none;
+	position: absolute;
+	width: fit-content;
+	height: fit-content;
+	z-index: 1;
 }
 
 .dropdown-content div a {
-    display: flex;
+	display: flex;
 }
 
 .account-dropdown {
-    position: absolute;
-    top: 160px;
-    right: 10px;
-    display: none;
-    /* display: flex; */
-    flex-direction: column;
-    width: 600px;
-    height: 500px;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: rgba(92, 208, 222, 0.9);
+	position: absolute;
+	top: 160px;
+	right: 10px;
+	display: none;
+	/* display: flex; */
+	flex-direction: column;
+	width: 600px;
+	height: 500px;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: rgba(92, 208, 222, 0.9);
 }
 
 .account-dropdown-name {
-    width: 100%;
-    height: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 5%;
-    /* background-color: red; */
+	width: 100%;
+	height: 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 5%;
+	/* background-color: red; */
 }
 
 .account-dropdown-boekingen {
-    width: 100%;
-    height: 70%;
-    /* background-color: plum; */
+	width: 100%;
+	height: 70%;
+	/* background-color: plum; */
 }
 
 .account-dropdown-boekingen ul {
-    padding: 0;
-    margin: 0;
-    padding-left: 20px;
-    /* list-style-type: none; */
-    /* list-style-position: inside; */
+	padding: 0;
+	margin: 0;
+	padding-left: 20px;
+	/* list-style-type: none; */
+	/* list-style-position: inside; */
 }
 
 .account-dropdown-boekingen a {
-    color: rgb(159, 0, 0);
+	color: rgb(159, 0, 0);
 }
 
 .account-dropdown-misc {
-    width: 100%;
-    height: 10%;
-    display: flex;
-    align-items: flex-end;
-    /* background-color: blue; */
+	width: 100%;
+	height: 10%;
+	display: flex;
+	align-items: flex-end;
+	/* background-color: blue; */
 }
 
 .account-dropdown-misc a {
-    color: rgb(159, 0, 0);
+	color: rgb(159, 0, 0);
 }
 
 
@@ -152,34 +151,34 @@
 footer input[type="text"],
 footer select,
 footer textarea {
-    height: 25px;
-    max-height: 100px;
-    width: 100%;
-    /* Full width */
-    padding: 12px;
-    /* Some padding */
-    border: 1px solid #ccc;
-    /* Gray border */
-    border-radius: 4px;
-    /* Rounded borders */
-    box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    /* Add a top margin */
-    margin-bottom: 16px;
-    /* Bottom margin */
-    resize: vertical;
-    /* Allow the user to vertically resize the textarea (not horizontally) */
+	height: 25px;
+	max-height: 100px;
+	width: 100%;
+	/* Full width */
+	padding: 12px;
+	/* Some padding */
+	border: 1px solid #ccc;
+	/* Gray border */
+	border-radius: 4px;
+	/* Rounded borders */
+	box-sizing: border-box;
+	/* Make sure that padding and width stays in place */
+	margin-top: 6px;
+	/* Add a top margin */
+	margin-bottom: 16px;
+	/* Bottom margin */
+	resize: vertical;
+	/* Allow the user to vertically resize the textarea (not horizontally) */
 }
 
 footer {
-    margin-top: 50px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    min-height: 380px;
-    height: fit-content;
-    background-color: #66C1CC;
+	margin-top: 50px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	min-height: 380px;
+	height: fit-content;
+	background-color: #66c1cc;
 }
 
 
@@ -202,35 +201,34 @@ footer input[type="submit"]:hover {
 }
 
 #footerleft {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
+	display: flex;
+	flex-direction: column;
+	width: 50%;
 }
 
 #footerright {
-    display: flex;
-    width: 50%;
-    flex-direction: column;
+	display: flex;
+	width: 50%;
+	flex-direction: column;
 }
 
 #container1 {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
 }
 
 footer h1 {
-    font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+	font-size: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 #footerright * {
-    text-align: center;
+	text-align: center;
 }
-
 
 /* The container <div> - needed to position the dropdown content */
 
@@ -255,21 +253,19 @@ footer h1 {
     margin: 10px;
 }
 
-
 /* Style the submit button with a specific background color etc */
 
 footer input[type="submit"] {
-    background-color: #04aa6d;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+	background-color: #04aa6d;
+	color: white;
+	padding: 12px 20px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
 }
-
 
 /* Show the dropdown menu on hover */
 
 .dropdown:hover .dropdown-content {
-    display: flex;
+	display: flex;
 }

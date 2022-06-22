@@ -21,11 +21,8 @@ include_once("php/connect.php");
 
   <!-- Main -->
   <main>
-    <h2>Contact Pagina</h2>
+    <?php include_once("includes/footer.php"); ?>
   </main>
-
-  <!-- Footer -->
-  <?php include_once("includes/footer.php"); ?>
 
   <!-- Scripts -->
   <script src="js/main.js"></script>

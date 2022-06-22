@@ -60,6 +60,12 @@
       <div class="account-dropdown-misc">
         <a href="php/logout.php"><b>Uitloggen</b></a>
       </div>
-    </div>
   <?php } ?>
+  
+  <div class="navbutton search">
+    <form action="reizen.php" method="post">
+      <label for="search">Search: </label>
+      <input type="text" name="search" placeholder="Zoeken...">
+    </form>
+  </div>
 </div>
