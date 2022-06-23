@@ -22,13 +22,11 @@ include_once("php/connect.php");
 
   <!-- Main -->
   <main class="flex">
-    <form id="loginform" action="php/login.php" method="post">
+    <form id="loginform" action="php/resetwachtwoord.php" method="post">
       <?php
         if(isset($_GET['error'])) {
           if($_GET['error'] == "email") { ?>
             <b id="error">Email kan niet gevonden worden.</b>
-          <?php } else if($_GET['error'] == "password") { ?>
-            <b id="error">Het wachtwoord klopt niet.</b>
           <?php }
         }
       ?>
@@ -36,12 +34,15 @@ include_once("php/connect.php");
       <label for="email">Email:</label>
       <input class="textbox" type="email" name="email" required>
 
-      <label for="password"> Wachtwoord:</label>
-      <input class="textbox" type="password" name="password" required>
+      <label for="password"> Nieuw wachtwoord:</label>
+      <input id="pass1" class="textbox" type="password" name="password" required>
+      
+      <label for="password"> Nieuw wachtwoord herhalen:</label>
+      <input id="pass2" class="textbox" type="password" name="password-repeat" required>
 
-      <input class="form-button" type="submit" name="login" value="Inloggen"/>
+      <input class="form-button" type="submit" name="resetten" value="Resetten"/>
+      <a href="registreer.php">Inloggen</a>
       <a href="registreer.php">Registreren</a>
-      <a href="resetwachtwoord.php">Wachtwoord vergeten</a>
     </form>
   </main>
 
