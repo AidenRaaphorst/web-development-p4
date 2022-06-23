@@ -64,7 +64,7 @@
   <?php } ?>
   
   <div class="navbutton search">
-    <form action="reizen.php" method="post">
+    <form action="reizen.php" method="get">
       <label for="search">Search: </label>
       <input type="text" name="search" placeholder="Zoeken...">
     </form>
