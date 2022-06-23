@@ -1,4 +1,7 @@
-<?php include_once("php/connect.php"); ?>
+<?php
+session_start();
+include_once("php/connect.php");
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,7 +50,10 @@
 
         foreach ($result as $res) { ?>
           <div class="bestemming">
-            <p><?php echo ucfirst($res['titel']); ?><a href="reizen.php?titel=<?php echo $res['titel']; ?>"> <button class="leesmeer" >Lees meer</button></a></p>
+            <p>
+              <?php echo ucfirst($res['titel']); ?>
+              <a href="reizen.php?titel=<?php echo $res['titel']; ?>"><button class="leesmeer" >Lees meer</button></a>
+            </p>
             <img src="<?php echo $res['img'] ?>" alt="plaatje van de bestemming" height="230px">
           </div>
         <?php }
@@ -61,20 +67,34 @@
 
         foreach ($result as $res) { ?>
           <div class="bestemminggroot">
-            <h1><?php echo ucfirst($res['titel']); ?><a> <button class="boeken" >Boeken</button></a></h1>
-            <p id="datum">Van <?php echo $res['beginDatum']; ?> tot <?php echo $res['eindDatum']; ?></p>
+            <h1>
+              <?php echo ucfirst($res['titel']); ?>
+              <a href="php/boeken.php?reisID=<?php echo $res['reisID'] ?>"><button class="boeken">Boeken</button></a>
+            </h1>
+            <p id="datum"><?php echo "Van ".$res['beginDatum']." tot ".$res['eindDatum']; ?></p>
             <p><img src="img/ster.png" height="20px"><?php echo $res['sterren']; ?></p> 
-            <p>€<?php echo $res['prijs']; ?></p>
+            <p><?php echo "€".$res['prijs']; ?></p>
             <p id="beschrijving"><?php echo $res['beschrijving']; ?></p>
             <img class="bestemmingimg" src="<?php echo $res['img'] ?>" alt="plaatje van de bestemming" height="500px" width="auto">
           </div>
         <?php }
       }
       else {
-        $sql = "SELECT * FROM reizen";
-        $stmt = $connect->prepare($sql);
-        $stmt->execute();
-        $result = $stmt->fetchAll();
+        if(isset($_GET['search'])) {
+          $search = "%".$_GET['search']."%";
+          $sql = "SELECT * FROM reizen WHERE land LIKE :search1 OR titel LIKE :search2 OR beschrijving LIKE :search3";
+          $stmt = $connect->prepare($sql);
+          $stmt->bindParam(":search1", $search);
+          $stmt->bindParam(":search2", $search);
+          $stmt->bindParam(":search3", $search);
+          $stmt->execute();
+          $result = $stmt->fetchAll();
+        } else {
+          $sql = "SELECT * FROM reizen";
+          $stmt = $connect->prepare($sql);
+          $stmt->execute();
+          $result = $stmt->fetchAll();
+        }
 
         foreach ($result as $res) { ?>
           <div class="bestemming">
