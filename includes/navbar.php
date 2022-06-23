@@ -2,7 +2,7 @@
   <a href="index.php"><img src="img/riasreizenlogo.png" height="150px"></a>
   <a class="navbutton" href="index.php">Home</a>
   <div class="dropdown navbutton">
-  <a id="bestemmingbutton"href="reizen.php"><p>Bestemmingen</p></a>
+    <a id="bestemmingbutton"href="reizen.php"><p>Bestemmingen</p></a>
     <div class="dropdown-content">
       <div>
         <?php
@@ -35,31 +35,32 @@
         <ul>
           <?php
           $sql = "SELECT * FROM boekingen WHERE gebruikerID = :gebruikerID ORDER BY datum DESC";
-          $stmt = $connect->prepare($sql);
-          $stmt->bindParam(":gebruikerID", $_SESSION['userinfo']['gebruikerID']);
-          $stmt->execute();
-          $boekingen = $stmt->fetchAll();
+          $stmt = $connect -> prepare($sql);
+          $stmt -> bindParam(":gebruikerID", $_SESSION['userinfo']['gebruikerID']);
+          $stmt -> execute();
+          $boekingen = $stmt -> fetchAll();
 
           foreach ($boekingen as $boeking) {
             $sql = "SELECT * FROM reizen WHERE reisID = :reisID";
-            $stmt = $connect->prepare($sql);
-            $stmt->bindParam(":reisID", $boeking['reisID']);
-            $stmt->execute();
-            $reis = $stmt->fetch();
+            $stmt = $connect -> prepare($sql);
+            $stmt -> bindParam(":reisID", $boeking['reisID']);
+            $stmt -> execute();
+            $reis = $stmt -> fetch();
 
-                if($reis) { ?>
-                  <li>
-                    <?php echo ucfirst($reis['land']).": ".ucfirst($reis['titel']); ?>
-                    <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
-                  </li>
-                <?php } ?>
-              <?php } ?>
-          </ul>
-        </div>
+            if($reis) { ?>
+              <li>
+                <?php echo ucfirst($reis['land']).": ".ucfirst($reis['titel']); ?>
+                <a href="php/boekingAnnuleren.php?reisID=<?php echo $reis['reisID']; ?>"><b>(Annuleren)</b></a>
+              </li>
+            <?php } ?>
+          <?php } ?>
+        </ul>
+      </div>
 
       <div class="account-dropdown-misc">
         <a href="php/logout.php"><b>Uitloggen</b></a>
       </div>
+    </div>
   <?php } ?>
   
   <div class="navbutton search">
