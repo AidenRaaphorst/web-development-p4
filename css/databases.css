@@ -37,11 +37,11 @@
 }
 
 .long-text {
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 
 .long-text-img {
-	overflow-y: scroll;
+	overflow-y: auto;
 	word-break: break-all;
 }
 
