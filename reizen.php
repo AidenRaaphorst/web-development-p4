@@ -73,7 +73,7 @@ include_once("php/connect.php");
             <p id="sterren"><img src="img/ster.png" height="20px"><?php echo $reis['sterren']; ?></p> 
             <p id="prijs"><?php echo "€".$reis['prijs']; ?></p>
             <p id="beschrijving"><?php echo $reis['beschrijving']; ?></p>
-            <img class="bestemmingimg" src="<?php echo $res['img'] ?>" alt="plaatje van de bestemming" height="500px" width="auto">
+            <img class="bestemmingimg" src="<?php echo $reis['img'] ?>" alt="plaatje van de bestemming" height="500px" width="auto">
 
             <?php if(isset($_SESSION['userinfo'])) { ?>
               <h2 id="recensie-toevoegen">Recensie Schrijven</h2>
